@@ -26,13 +26,13 @@ public abstract class WorkerApiTask extends DefaultTask {
 
     @TaskAction
     public void execute() {
-//        getProblems().getReporter().reporting(problem -> problem
-//            .id("adhoc-worker-deprecation", "Plugin is deprecated")
-//            .contextualLabel("The 'worker-api-plugin' is deprecated")
-//            .documentedAt("https://github.com/gradle/gradle/README.md")
-//            .severity(Severity.WARNING)
-//            .solution("Please use a more recent plugin version")
-//        );
+        getProblems().getReporter().reporting(problem -> problem
+            .id("adhoc-worker-deprecation", "Plugin is deprecated")
+            .contextualLabel("The 'worker-api-plugin' is deprecated")
+            .documentedAt("https://github.com/gradle/gradle/README.md")
+            .severity(Severity.WARNING)
+            .solution("Please use a more recent plugin version")
+        );
 
         WorkQueue workQueue = getIsFork().get()
             ? getWorkerExecutor().processIsolation(spec -> {})

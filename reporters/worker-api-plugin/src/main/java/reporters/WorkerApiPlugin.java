@@ -17,9 +17,6 @@ import javax.inject.Inject;
  */
 public class WorkerApiPlugin implements Plugin<Project> {
 
-    public WorkerApiPlugin() {
-    }
-
     @Override
     public void apply(Project target) {
         TaskProvider<WorkerApiTask> workerApiTask = target.getTasks()
