@@ -104,7 +104,7 @@ public class SampleIde {
                     System.out.println(" - location: " + location);
                 }
             }
-            Failure exception = problem.getFailure().getFailure();
+            Failure exception = problem.getFailure();
             if (exception != null) {
                 System.out.println(" - exception: " + exception.getMessage());
             }

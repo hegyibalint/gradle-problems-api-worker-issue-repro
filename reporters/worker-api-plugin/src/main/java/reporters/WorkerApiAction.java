@@ -16,7 +16,7 @@ public abstract class WorkerApiAction implements WorkAction<WorkerApiTaskParamet
 
     @Override
     public void execute() {
-        problems.forNamespace("reporters.worker.api.plugin").reporting(problem -> problem
+        problems.getReporter().reporting(problem -> problem
             .id("adhoc-worker-deprecation", "Plugin is deprecated")
             .contextualLabel("The 'worker-api-plugin' is deprecated")
             .documentedAt("https://github.com/gradle/gradle/README.md")

@@ -26,7 +26,7 @@ public abstract class WorkerApiTask extends DefaultTask {
 
     @TaskAction
     public void execute() {
-//        getProblems().forNamespace("reporters.worker.api.plugin").reporting(problem -> problem
+//        getProblems().getReporter().reporting(problem -> problem
 //            .id("adhoc-worker-deprecation", "Plugin is deprecated")
 //            .contextualLabel("The 'worker-api-plugin' is deprecated")
 //            .documentedAt("https://github.com/gradle/gradle/README.md")
